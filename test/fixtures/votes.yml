@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  voter_name: MyString
+  voter_surname1: MyString
+  voter_surname2: MyString
+  voter_cif: MyString
+  encrypted_vote: MyText
+  dnie_certificate: MyText
+  signed_votes: MyText
+  votes_signature: MyText
+
+two:
+  voter_name: MyString
+  voter_surname1: MyString
+  voter_surname2: MyString
+  voter_cif: MyString
+  encrypted_vote: MyText
+  dnie_certificate: MyText
+  signed_votes: MyText
+  votes_signature: MyText

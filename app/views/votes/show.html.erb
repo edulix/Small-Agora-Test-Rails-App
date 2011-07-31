@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Voter name:</b>
+  <%= @vote.voter_name %>
+</p>
+
+<p>
+  <b>Voter surname1:</b>
+  <%= @vote.voter_surname1 %>
+</p>
+
+<p>
+  <b>Voter surname2:</b>
+  <%= @vote.voter_surname2 %>
+</p>
+
+<p>
+  <b>Voter cif:</b>
+  <%= @vote.voter_cif %>
+</p>
+
+<p>
+  <b>Encrypted vote:</b>
+  <%= @vote.encrypted_vote %>
+</p>
+
+<p>
+  <b>Dnie certificate:</b>
+  <%= @vote.dnie_certificate %>
+</p>
+
+<p>
+  <b>Signed votes:</b>
+  <%= @vote.signed_votes %>
+</p>
+
+<p>
+  <b>Votes signature:</b>
+  <%= @vote.votes_signature %>
+</p>
+
+
+<%= link_to 'Edit', edit_vote_path(@vote) %> |
+<%= link_to 'Back', votes_path %>

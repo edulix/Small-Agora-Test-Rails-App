@@ -1,0 +1,37 @@
+<h1>Listing votes</h1>
+
+<table>
+  <tr>
+    <th>Voter name</th>
+    <th>Voter surname1</th>
+    <th>Voter surname2</th>
+    <th>Voter cif</th>
+    <th>Encrypted vote</th>
+    <th>Dnie certificate</th>
+    <th>Signed votes</th>
+    <th>Votes signature</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @votes.each do |vote| %>
+  <tr>
+    <td><%= vote.voter_name %></td>
+    <td><%= vote.voter_surname1 %></td>
+    <td><%= vote.voter_surname2 %></td>
+    <td><%= vote.voter_cif %></td>
+    <td><%= vote.encrypted_vote %></td>
+    <td><%= vote.dnie_certificate %></td>
+    <td><%= vote.signed_votes %></td>
+    <td><%= vote.votes_signature %></td>
+    <td><%= link_to 'Show', vote %></td>
+    <td><%= link_to 'Edit', edit_vote_path(vote) %></td>
+    <td><%= link_to 'Destroy', vote, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vote', new_vote_path %>
