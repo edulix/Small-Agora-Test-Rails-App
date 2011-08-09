@@ -45,7 +45,14 @@ class VotesController < ApplicationController
 
     params[:voting_id].each_index { |index|
         voting = Voting.find(params[:voting_id][index])
-        args += [params[:encrypted_vote][index], voting.public_key]
+        args += [
+            params[:encrypted_vote][index],
+            voting.public_key,
+            params[:voting_id][index],
+            params[:a_factor][index],
+            params[:d_factor][index],
+            params[:u_factor][index]
+        ]
     }
 
     result = %x[votecheck.sh #{args.join(' ')}]
